@@ -1,0 +1,42 @@
+<div class="login-dark">
+
+  <form novalidate #loginform = "ngForm" (ngSubmit)="onsubmit(loginform)" style="background-color: #ffffff;">
+    <h2 class="sr-only">Login Form</h2>
+    <div class="illustration">
+      <img src="assets/LOGO1.png" class="img-fluid">
+    </div>
+
+    <div class="form-group">
+      <input class="form-control"
+             [(ngModel)]=" loginCredit.email"
+             #email = "ngModel"
+             type="email"
+             name="email"
+             required = "required"
+             minlength="5"
+             placeholder="Email">
+      <div [hidden]= "email.valid || email.pristine" class="alert alert-danger" >email is required</div>
+
+    </div>
+
+    <div class="form-group">
+      <input class="form-control"
+             [(ngModel)] = "loginCredit.password"
+             required = "required"
+             minlength="5"
+             #password = "ngModel"
+             type="password"
+             name="password"
+
+             placeholder="Password">
+      <div [hidden]= "password.valid || password.pristine" class="alert alert-danger" >password is required</div>
+
+    </div>
+
+
+    <div class="form-group">
+      <button class="btn btn-primary btn-block" type="submit" >Log In</button>
+    </div>
+    <a routerLink="/register" class="forgot">Create new Account</a>
+  </form>
+</div>

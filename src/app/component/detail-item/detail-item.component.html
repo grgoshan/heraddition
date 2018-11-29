@@ -1,0 +1,18 @@
+<div class="border">
+  <div class="wrap">
+    <div class="product-wrap">
+      <a href><img src="{{product.productFiles}}" />
+      </a>
+
+      <h6 class="badge-tag">{{product.tag}}</h6>
+    </div>
+    <div class="loop-action">
+      <a  class="add-to-cart" (click)="addTocart(product)"> Add to Cart</a>
+      <a [routerLink]= "['/product', product.id ]" class="loop-add-to-cart">View Details</a></div>
+  </div>
+  <div class="product-info">
+    <div class="stars"></div>
+    <h3 class="product-title">{{product.name}}</h3>
+    <div class="price">$ {{product.price}} </div>
+  </div>
+</div>

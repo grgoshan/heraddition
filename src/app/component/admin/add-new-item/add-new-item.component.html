@@ -1,0 +1,173 @@
+
+<div class="login-clean">
+  <form [formGroup] = "addItemFormGroup" (ngSubmit)="onFormSubmit(addItemFormGroup.value) " >
+    <h2>Add new Item</h2>
+
+    <div class="form-group">
+<input
+  type="text"
+  class="form-control"
+  placeholder="Product name"
+  formControlName="productname"
+>
+  <div class="alert alert-danger" *ngIf="!addItemFormGroup.controls['productname'].valid &&
+(addItemFormGroup.controls['productname']).touched">
+
+    <div [hidden]="!addItemFormGroup.controls['productname'].errors.required" >
+      product name is required
+    </div>
+
+    <div [hidden]="!addItemFormGroup.controls['productname'].errors.minlength">
+      product name must have 3 word
+    </div>
+
+  </div>
+
+    </div>
+    <div class="form-group">
+      <input
+        type="number"
+        class="form-control"
+        placeholder="Product price"
+        formControlName="price"
+
+      >
+      <div class="alert alert-danger" *ngIf="!addItemFormGroup.controls['price'].valid &&
+(addItemFormGroup.controls['price']).touched">
+
+        <div [hidden]="!addItemFormGroup.controls['price'].errors.required" >
+          product name is required
+        </div>
+
+        <div [hidden]="!addItemFormGroup.controls['price'].errors.minlength">
+          product name must have 3 word
+        </div>
+
+      </div>
+
+    </div>
+    <div class="form-group">
+      <input
+        type="text"
+        class="form-control "
+        placeholder="Description"
+        formControlName="description"
+        style="height: 200px"
+      >
+      <div class="alert alert-danger" *ngIf="!addItemFormGroup.controls['description'].valid &&
+(addItemFormGroup.controls['description']).touched">
+
+        <div [hidden]="!addItemFormGroup.controls['description'].errors.required" >
+          product name is required
+        </div>
+
+        <div [hidden]="!addItemFormGroup.controls['description'].errors.minlength">
+          product name must have 3 word
+        </div>
+
+      </div>
+
+    </div>
+    <div class="form-group">
+  <label>Tag </label>
+      <select
+        class="form-control "
+       formControlName="tag" #tag
+      >
+        <optgroup label="Tag">
+          <option value="new arrival" selected="">New Arrival</option>
+          <option value="sale">Sale</option>
+          <option value="special">Special</option>
+          <option value="limited">Limited Edition</option>
+        </optgroup>
+      </select>
+      <div class="alert alert-danger" *ngIf="!addItemFormGroup.controls['tag'].valid && (addItemFormGroup.controls['tag'].touched)">
+        <div [hidden]="!addItemFormGroup.controls['tag'].errors.required">
+          Tag name is required.
+        </div>
+      </div>
+
+    </div>
+    <div class="form-group">
+      <label>Category</label>
+      <select
+        class="form-control"
+       formControlName="category" #category
+      >
+        <optgroup label="Category">
+          <option value="earing" selected="">Earings</option>
+          <option value="bangles">Bangles</option>
+          <option value="necklace">Necklace</option>
+          <option value="Hairpins">Bangles</option>
+        <option value="sale">Sale</option>
+        </optgroup>
+      </select>
+
+      <div class="alert alert-danger" *ngIf="!addItemFormGroup.controls['category'].valid && (addItemFormGroup.controls['category'].touched)">
+        <div [hidden]="!addItemFormGroup.controls['category'].errors.required">
+          Category name is required.
+        </div>
+      </div>
+    </div>
+    <div class="form-group">
+      <input type= "file" ng2FileSelect [uploader]="uploader" multiple  /> <br/>
+    </div>
+
+    <h3>Upload queue</h3>
+    <p>Queue length: {{ uploader?.queue?.length }}</p>
+
+    <table class="table">
+      <thead>
+      <tr>
+        <th width="50%">Name</th>
+        <th>Size</th>
+        <th>Progress</th>
+        <th>Status</th>
+        <th>Actions</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let item of uploader.queue">
+        <td><strong>{{ item?.file?.name }}</strong></td>
+        <td *ngIf="uploader.isHTML5" nowrap>{{ item?.file?.size/1024/1024 | number:'.2' }} MB</td>
+        <td *ngIf="uploader.isHTML5">
+          <div class="progress" style="margin-bottom: 0;">
+            <div class="progress-bar" role="progressbar" [ngStyle]="{ 'width': item.progress + '%' }"></div>
+          </div>
+        </td>
+        <td class="text-center">
+          <span *ngIf="item.isSuccess"><i class="glyphicon glyphicon-ok"></i></span>
+          <span *ngIf="item.isCancel"><i class="glyphicon glyphicon-ban-circle"></i></span>
+          <span *ngIf="item.isError"><i class="glyphicon glyphicon-remove"></i></span>
+        </td>
+        <td nowrap>
+
+
+
+
+
+          <button type="button" class="btn btn-danger btn-xs"
+                  (click)="item.remove()">
+            <span class="glyphicon glyphicon-trash"></span> Remove
+          </button>
+        </td>
+      </tr>
+      </tbody>
+    </table>
+
+
+
+
+
+    <div class="form-group">
+      <button class="btn btn-primary btn-block" type="submit" >Submit</button>
+    </div>
+
+  </form>
+
+
+
+</div>
+
+
+

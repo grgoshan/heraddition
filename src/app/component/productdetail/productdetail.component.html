@@ -1,0 +1,28 @@
+<section></section>
+<h5 class="text-center">{{name}}</h5>
+<div>
+  <div class="container" >
+    <div class="row">
+      <div class="col-md-3 col-lg-2 col-xl-2 col-sm-4">
+        <ul class="list-unstyled" >
+          <li *ngFor = "let image of images"><img class="img-fluid d-flex flex-fill extra-prod-img" [src]="image" (click)="displayImage(image)" ></li>
+
+        </ul>
+
+
+
+
+      </div>
+      <div class="col-md-9 col-lg-5 col-xl-5 col-sm-8 justify-content-center"><img class="img-fluid highlight-img" [src]="dImage"></div>
+      <div class="col-md-12 col-lg-5 col-xl-5 col-sm-12">
+        <section>
+          <h5 style="font-family: 'Raleway', monospace;">{{name}}</h5>
+          <p style="font-size: 12px;color: rgb(221,173,79);margin: -8px 0px 16px;font-family: 'Raleway', monospace;">28 customers review</p>
+          <p style="font-family: 'Raleway', monospace;">Details</p>
+          <p style="font-family: 'Raleway', monospace;color: rgb(40,44,48);">{{description}}</p>
+          <h6 style="font-family: 'Raleway', monospace;color: rgb(7,7,7);">Price: ${{price}} + $5 shipping&nbsp;</h6><button class="btn btn-primary float-right" type="button" style="background-color:#d7a738 ;">Add To Cart</button></section>
+      </div>
+    </div>
+  </div>
+</div>
+<app-footer></app-footer>

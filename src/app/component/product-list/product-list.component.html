@@ -1,0 +1,10 @@
+
+<mat-grid-list [cols]="breakpoint" rowHeight="3:4"  gutterSize="1px" (window:resize) = "onResize($event)" >
+  <mat-grid-tile *ngFor="let item of products">
+    <app-detail-item [product] = "item"></app-detail-item>
+  </mat-grid-tile>
+
+
+
+</mat-grid-list>
+

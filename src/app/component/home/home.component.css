@@ -1,0 +1,100 @@
+html * {
+  font-family: Raleway;
+}
+
+.row.bgcat {
+  display: flex;
+  margin-top: 10px;
+  margin-left: 10%;
+  margin-right: 10%;
+  justify-content: center;
+  font-family:Raleway;
+}
+
+.row.bgcat.col-md-3.col-sm-12.col-lg-3{
+  -ms-flex: 0 0 25%;
+  flex: 0 0 25%;
+  max-width: 25%;
+  margin-left: 2px;
+  margin-right: 2px;
+}
+
+@media (min-width: 360px) {
+ .row.bgcat.col-sm-12{
+
+   justify-content: center;
+   margin-right: auto;
+   margin-left: auto;
+ }
+}
+
+.catimg {
+  width: 100%;
+  padding: 10px 10px 10px 10px;
+}
+
+
+
+.seasonalpromo {
+  position: relative;
+  width: 100%;
+}
+
+.seasonalpromo .btn-primary:not(:disabled):not(.disabled) {
+  position: absolute;
+  bottom: 80px;
+  background-color: #ffc62a;
+  right: 16px;
+  border-color: white;
+  min-height: 30px;
+}
+
+.seasonalpromo .btn-default:not(:disabled):not(.disabled){
+  position: absolute;
+
+  bottom: 20px;
+  right: 16px;
+}
+
+
+
+.scrolling-wrapper {
+  overflow-x: scroll;
+  overflow-y: hidden;
+  white-space: nowrap;
+}
+
+.arrival{
+  font-family: Raleway;
+}
+.scrolling-wrapper.card {
+  position: relative;
+  display: -ms-flexbox;
+  display: inline-block;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  min-width: 0;
+  word-wrap: break-word;
+  background-color: #fff;
+  background-clip: border-box;
+  border: 1px solid rgba(0,0,0,.125);
+  border-radius: .25rem;
+}
+
+.card {
+  position: relative;
+  /*display: -ms-flexbox;*/
+  display: inline-block;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  min-width: 0;
+  width: 30%;
+  word-wrap: break-word;
+  background-color: #fff;
+  background-clip: border-box;
+  border: 1px solid rgba(0,0,0,.125);
+  border-radius: .25rem;
+}
+
+
+

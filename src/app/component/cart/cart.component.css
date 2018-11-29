@@ -1,0 +1,29 @@
+
+.table-container {
+  margin-right: 15px;
+  margin-left: 15px;
+}
+
+.table-responsive .table-head {
+  background: #475d62;
+  color: #ffffff;
+
+}
+
+.data-cell {
+  align-items: center;
+  margin: auto;
+}
+
+.img-fluid {
+  width: 250px;
+  height: 250px;
+}
+
+.h4 {
+  display: inline-block;
+}
+
+.p {
+
+}

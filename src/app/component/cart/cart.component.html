@@ -1,0 +1,50 @@
+<div class="table-container">
+
+  <div class="table-responsive">
+    <table class="table table-bordered">
+      <thead class="table-head">
+      <tr >
+        <th>
+        </th>
+        <th>
+          product
+        </th>
+
+        <th>
+          price
+        </th>
+        <th>
+          quantity
+        </th>
+
+        <th>
+          action
+        </th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor= " let cart of carts; let i = index">
+        <td class="data-cell" style="width: 20%" *ngIf="i >0">
+          <img  class="img-fluid" src="{{cart.image}}">
+        </td>
+        <td *ngIf="i > 0">
+          <h4>{{cart.name}}</h4>
+
+          <p>{{cart.description}}</p>
+        </td>
+
+        <td *ngIf="i >0">
+          {{cart.price}}
+        </td>
+
+        <td *ngIf="i >0"> quantity 1</td>
+
+        <td *ngIf="i > 0">
+          <button class="btn btn-danger"> Delete</button>
+        </td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
