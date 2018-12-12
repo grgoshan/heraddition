@@ -1,0 +1,38 @@
+
+.body{
+  font-family: 'Raleway', monospace;
+}
+.bannerimage {
+  width: 100%;
+  height: 30%;
+  margin-bottom: 20px;
+  align-self: center;
+
+}
+
+.img-fluid {
+}
+
+.rowImage {
+  width: 100%;
+  height: 80%;
+}
+
+.container{
+  margin-top: 30px;
+  font-family: "Raleway", Sans-serif;
+}
+
+.two {
+  margin-top: 20px;
+}
+
+
+.btn {
+  background: #04b6a8;
+  font-family: "Raleway", Sans-serif;
+  color: #ffffff;
+  border-radius: 0px;
+  border-color: #04b6a8;
+  float: right;
+}

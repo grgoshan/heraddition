@@ -12,6 +12,14 @@ import {ProductListComponent} from './component/product-list/product-list.compon
 import {DetailItemComponent} from './component/detail-item/detail-item.component';
 import {PagenotfoundComponent} from './component/pagenotfound/pagenotfound.component';
 import {CartComponent} from './component/cart/cart.component';
+import {CardviewComponent} from './component/cardview/cardview.component';
+import {MultiImageSliderComponent} from './component/multi-image-slider/multi-image-slider.component';
+import {PromotionalProductComponent} from './component/promotional-product/promotional-product.component';
+import {CheckoutComponent} from './component/checkout/checkout.component';
+import {ShippingComponent} from './component/shipping/shipping.component';
+import {ReturnExchangeComponent} from './component/return-exchange/return-exchange.component';
+import {BlogComponentComponent} from './component/blog-component/blog-component.component';
+
 
 const routes: Routes = [
   {path: '', component: HomeComponent},
@@ -25,7 +33,15 @@ const routes: Routes = [
   {path: 'products', component: ProductListComponent },
   {path: 'test', component: DetailItemComponent },
   {path: '404', component: PagenotfoundComponent},
-  {path: 'cart', component: CartComponent}
+  {path: 'cart', component: CartComponent},
+  {path: 'card', component: CardviewComponent},
+  {path: 'mul', component: MultiImageSliderComponent},
+  {path: 'promo', component: PromotionalProductComponent},
+  {path: 'bill' , component: CheckoutComponent},
+  {path: 'shipping', component: ShippingComponent},
+  {path: 'return&exchange', component: ReturnExchangeComponent},
+  {path: 'blog', component: BlogComponentComponent}
+
 ];
 
 @NgModule({

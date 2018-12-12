@@ -116,32 +116,6 @@ router.post('/file', (req, res, next) =>{
 
 });
 
-router.get('/', (req, res, next)=> {
-console.log(req.query.category);
-ProductModel.find({
-  category: req.query.category
-}).exec().then(docs =>{
-  const response = {
-    count: docs.length,
-    products : docs.map(doc => {
-      return {
-        id: doc._id,
-        name: doc.name,
-        price:doc.price,
-        tag: doc.tag,
-        productFiles: doc.productFiles[0],
-        imageList: doc.productFiles
-      }
-    })
-  }
-
-  res.status(200).json(response)
-})
-
-
-});
-
-
 router.get('/:productId', (req, res, next) => {
   const id = req.params.productId;
   ProductModel.findById(id).exec().then(doc =>{
@@ -157,4 +131,38 @@ router.get('/:productId', (req, res, next) => {
     res.status(500).json({error: error})
   })
 })
+
+
+router.get('/', (req, res, next)=> {
+console.log(req.query.category);
+ProductModel.find({
+  category: req.query.category
+}).exec().then(docs =>{
+  const response = {
+    count: docs.length,
+    products : docs.map(doc => {
+      return {
+        id: doc._id,
+        name: doc.name,
+        price:doc.price,
+        tag: doc.tag,
+        productFiles: doc.productFiles[0],
+        category: doc.category,
+        imageList: doc.productFiles
+      }
+    })
+  }
+
+  res.status(200).json(response)
+})
+
+
+});
+
+
+
+router.get('/newarrival', (req, res, next)=> {
+
+})
 module.exports = router;
+

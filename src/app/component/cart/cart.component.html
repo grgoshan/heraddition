@@ -1,4 +1,4 @@
-<div class="table-container">
+<!--<div class="table-container">
 
   <div class="table-responsive">
     <table class="table table-bordered">
@@ -37,7 +37,7 @@
           {{cart.price}}
         </td>
 
-        <td *ngIf="i >0"> quantity 1</td>
+        <td *ngIf="i >0"> {{cart.category}}</td>
 
         <td *ngIf="i > 0">
           <button class="btn btn-danger"> Delete</button>
@@ -48,3 +48,259 @@
   </div>
 </div>
 
+
+<div class="container">
+
+
+  <hr>
+
+
+
+  <div class="card">
+    <table class="table table-hover shopping-cart-wrap">
+      <thead class="text-muted">
+      <tr>
+        <th scope="col">Product</th>
+        <th scope="col" width="120">Quantity</th>
+        <th scope="col" width="120">Price</th>
+        <th scope="col" width="200" class="text-right">Action</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor= " let cart of carts; let i = index">
+        <td>
+          <figure class="media">
+            <div class="img-wrap"><img src="{{cart.image}}" class="img-thumbnail img-sm"></div>
+            <figcaption class="media-body">
+              <h6 class="title text-truncate">{{cart.name}} </h6>
+              <dl class="param param-inline small">
+                <dt>Type: </dt>
+                <dd>{{cart.category}}</dd>
+              </dl>
+              <dl class="param param-inline small">
+                <dt>Color: </dt>
+                <dd>Orange color</dd>
+              </dl>
+            </figcaption>
+          </figure>
+        </td>
+        <td>
+          <select class="form-control">
+            <option>1</option>
+
+          </select>
+        </td>
+
+        <td>
+          <div class="price-wrap">
+            <var class="price">USD {{cart.price}}</var>
+            <small class="text-muted">(shipping USD 5 each)</small>
+          </div> &lt;!&ndash; price-wrap .// &ndash;&gt;
+        </td>
+        <td class="text-right">
+          <a title="" href="" class="btn btn-outline-success" data-toggle="tooltip" data-original-title="Save to Wishlist"> <i class="fa fa-heart"></i></a>
+          <a href="" class="btn btn-outline-danger"> × Remove</a>
+        </td>
+      </tr>
+
+
+
+
+      <tr>
+        <td>
+          <figure class="media">
+            <div class="img-wrap"><img src="http://bootstrap-ecommerce.com/main/images/items/1.jpg" class="img-thumbnail img-sm"></div>
+            <figcaption class="media-body">
+              <h6 class="title text-truncate">Product name goes here </h6>
+              <dl class="param param-inline small">
+                <dt>Size: </dt>
+                <dd>XXL</dd>
+              </dl>
+              <dl class="param param-inline small">
+                <dt>Color: </dt>
+                <dd>Orange color</dd>
+              </dl>
+            </figcaption>
+          </figure>
+        </td>
+        <td>
+          <select class="form-control">
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+          </select>
+        </td>
+        <td>
+          <div class="price-wrap">
+            <var class="price">USD 35</var>
+            <small class="text-muted">(USD10 each)</small>
+          </div> &lt;!&ndash; price-wrap .// &ndash;&gt;
+        </td>
+        <td class="text-right">
+          <a title="" href="" class="btn btn-outline-success" data-toggle="tooltip" data-original-title="Save to Wishlist"> <i class="fa fa-heart"></i></a>
+          <a href="" class="btn btn-outline-danger btn-round"> × Remove</a>
+        </td>
+      </tr>
+
+
+      <tr>
+        <td>
+          <figure class="media">
+            <div class="img-wrap"><img src="http://bootstrap-ecommerce.com/main/images/items/2.jpg" class="img-thumbnail img-sm"></div>
+            <figcaption class="media-body">
+              <h6 class="title text-truncate">Product name goes here </h6>
+              <dl class="param param-inline small">
+                <dt>Size: </dt>
+                <dd>XXL</dd>
+              </dl>
+              <dl class="param param-inline small">
+                <dt>Color: </dt>
+                <dd>Orange color</dd>
+              </dl>
+            </figcaption>
+          </figure>
+        </td>
+        <td>
+          <select class="form-control">
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+          </select>
+        </td>
+        <td>
+          <div class="price-wrap">
+            <var class="price">USD 45</var>
+            <small class="text-muted">(USD15 each)</small>
+          </div> &lt;!&ndash; price-wrap .// &ndash;&gt;
+        </td>
+        <td class="text-right">
+          <a title="" href="" class="btn btn-outline-success" data-toggle="tooltip" data-original-title="Save to Wishlist"> <i class="fa fa-heart"></i></a>
+          <a href="" class="btn btn-outline-danger btn-round"> × Remove</a>
+        </td>
+      </tr>
+      </tbody>
+    </table>
+  </div> &lt;!&ndash; card.// &ndash;&gt;
+
+</div>-->
+
+
+<div class="row">
+  <div class="col-lg-8 col-md-8 col-sm-12">
+
+    <div class="container">
+
+      <div class="card">
+        <table class="table table-hover shopping-cart-wrap">
+          <thead class="text-muted">
+          <tr>
+            <th scope="col">Product</th>
+            <th scope="col" width="120">Quantity</th>
+            <th scope="col" width="120">Price</th>
+            <th scope="col" width="200" class="text-right">Action</th>
+          </tr>
+          </thead>
+          <tbody>
+
+
+          <tr *ngFor= " let cart of carts; let i = index">
+            <td *ngIf="i >0">
+              <figure class="media">
+                <div class="img-wrap"><img src="{{cart.image}}" class="img-thumbnail img-sm"></div>
+                <figcaption class="media-body">
+                  <h6 class="title text-truncate">{{cart.name}} </h6>
+                  <dl class="param param-inline small">
+                    <dt>Type: </dt>
+                    <dd>{{cart.category}}</dd>
+                  </dl>
+                  <dl class="param param-inline small">
+                    <dt>Color: </dt>
+                    <dd>Orange color</dd>
+                  </dl>
+                </figcaption>
+              </figure>
+            </td>
+            <td *ngIf="i >0">
+              <select class="form-control">
+                <option>1</option>
+
+              </select>
+            </td>
+            <td *ngIf="i >0">
+              <div class="price-wrap">
+                <var class="price">USD {{cart.price}}</var>
+                <small class="text-muted">(shipping USD 5 each)</small>
+              </div> <!-- price-wrap .// -->
+            </td>
+            <td class="text-right" *ngIf="i >0">
+              <a title="" [routerLink]= "['/product', cart.id ]"  class="btn btn-outline-success" data-toggle="tooltip" data-original-title="Save to Wishlist" > <i class="fa fa-picture-o"></i></a>
+              <a  class="btn btn-outline-danger" (click)="removeItem(cart.id)"  > × Remove</a>
+            </td>
+          </tr>
+
+
+
+
+
+          </tbody>
+        </table>
+      </div> <!-- card.// -->
+
+    </div>
+  </div>
+
+  <div class="col-lg-4 col-md-4 col-sm-12">
+    <div class="widget">
+      <h4 class="widget-title">Order Summary</h4>
+      <div class="summary-block">
+        <div class="summary-content">
+          <div class="summary-head"><h5 class="summary-title">Amount</h5></div>
+          <div class="summary-price">
+            <p class="summary-text">USD {{totalamount}}</p>
+
+           <!-- <span class="summary-small-text pull-right">1 month</span>-->
+          </div>
+        </div>
+      </div>
+
+
+      <div class="summary-block">
+        <div class="summary-content">
+          <div class="summary-head"> <h5 class="summary-title">Shipping and handling</h5></div>
+          <div class="summary-price">
+            <p class="summary-text">USD {{shippingAmount}}</p>
+            <span class="summary-small-text pull-right">usd 5 each(no tax)</span>
+          </div>
+        </div>
+      </div>
+      <div class="summary-block">
+        <div class="summary-content">
+          <div class="summary-head"> <h5 class="summary-title">Tax</h5></div>
+          <div class="summary-price">
+            <p class="summary-text">USD {{taxAmount}}</p>
+            <span class="summary-small-text pull-right">8.875 % tax(NY) </span>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="summary-block">
+        <div class="summary-content">
+          <div class="summary-head"> <h5 class="summary-title">Total</h5></div>
+          <div class="summary-price">
+            <p class="summary-text">USD {{finalAmount}}</p>
+
+          </div>
+        </div>
+      </div>
+
+      <div class="summary-block">
+        <br>
+        <button class="btn btn-primary" [routerLink]= "['/bill' ]"  > <i class="fa fa-credit-card"></i> Checkout</button>
+      </div>
+    </div>
+  </div>
+
+</div>

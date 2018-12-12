@@ -8,6 +8,7 @@ const httpOptions = {
 }
 
 const api = '/api/product';
+const api1 = '/api/home';
 @Injectable({
   providedIn: 'root'
 })
@@ -42,4 +43,16 @@ export class ProductService {
     console.log(url);
     return this.http.get(url, httpOptions).pipe(map(this.extractData), catchError(this.handleError));
   }
+  getNewArrivalItems(tag, limit): Observable<any> {
+  const url = `${api1}/new?tag=${tag}&limit=${limit}`;
+    console.log('new arrival url' + url);
+  return this.http.get(url, httpOptions).pipe(map(this.extractData), catchError(this.handleError));
+}
+
+  getNewPromo(tag, limit): Observable<any> {
+    const url = `${api1}/promo?tag=${tag}&limit=${limit}`;
+    console.log('new arrival url' + url);
+    return this.http.get(url);
+  }
+
 }

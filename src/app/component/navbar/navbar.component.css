@@ -173,13 +173,22 @@
 .flag{
   margin-right: 10px;
   margin-left: 10px;
+  height: 30px;
+  width: 35px;
 }
 .maticon {
   color: #ffffff;
-  font-size: 40px;
+  font-size: 30px;
 
 }
 .icon-btn {
   margin-right:5px;
   margin-left: 5px;
+}
+
+.username {
+  color: #ffffff;
+  font-family: "Raleway", Sans-serif;
+  font-size: 20px;
+  padding-top: 10px;
 }

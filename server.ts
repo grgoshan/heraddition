@@ -15,7 +15,7 @@ enableProdMode();
 // Express server
 const app = express();
 
-const PORT = process.env.PORT || 4000;
+const PORT = process.env.PORT || 3000;
 const DIST_FOLDER = join(process.cwd(), 'dist');
 require('./node_src/config/db');
 app.use('/uploads', express.static('uploads'));
@@ -25,6 +25,7 @@ const angular = require('./node_src/routes/angular');
 const api = require('./node_src/routes/api');
 const auth = require('./node_src/routes/auth');
 const productRouter = require('./node_src/routes/productRouter');
+const homeRouter = require('./node_src/routes/home');
 
 // MIDDLEWARE
 app.use(morgan('dev'));
@@ -60,6 +61,7 @@ app.get('/api/!*', (req, res) => {
 
 app.use('/api', api);
 app.use('/api/product', productRouter);
+app.use('/api/home', homeRouter);
 // Server static files from /browser
 app.get('*.*', express.static(join(DIST_FOLDER, 'browser')));
 

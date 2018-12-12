@@ -43,17 +43,20 @@ html * {
 .seasonalpromo .btn-primary:not(:disabled):not(.disabled) {
   position: absolute;
   bottom: 80px;
-  background-color: #ffc62a;
+  background-color: #d7a738;
+  border-color: #d7a738;
   right: 16px;
-  border-color: white;
+  font-family: "Raleway", Sans-serif;
+  border-radius: 0px;
   min-height: 30px;
 }
 
 .seasonalpromo .btn-default:not(:disabled):not(.disabled){
   position: absolute;
-
   bottom: 20px;
   right: 16px;
+  font-family: "Raleway", Sans-serif;
+  border-radius: 0px;
 }
 
 
@@ -66,6 +69,7 @@ html * {
 
 .arrival{
   font-family: Raleway;
+  margin-bottom: 30px;
 }
 .scrolling-wrapper.card {
   position: relative;
@@ -95,6 +99,5 @@ html * {
   border: 1px solid rgba(0,0,0,.125);
   border-radius: .25rem;
 }
-
 
 

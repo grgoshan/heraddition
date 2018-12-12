@@ -1,1 +1,28 @@
+.thin-line {
+  background: #04b6a8;
+  height: 1px;
+  width: 100%;
+  margin-bottom: 10px;
+}
 
+
+.thick-line {
+  background: #04b6a8;
+  height: 3px;
+  width: 100%;
+  margin-top: 10px;
+}
+
+.crumbread {
+  text-align: center;
+  margin-top: auto;
+  margin-left: 20px;
+  margin-bottom: auto;
+  font-family: "Raleway", Sans-serif;
+  font-size: 30px;
+}
+
+.crumConatiner {
+  margin-top: 30px;
+  display: block;
+}

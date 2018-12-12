@@ -1,0 +1,45 @@
+<div class = "scroller">
+  <div></div>
+
+  <div class="indicate-btn">
+
+      <mat-icon class="maticon"  (click)="moveLeft()">keyboard_arrow_left</mat-icon>
+
+  <!--  <button class="fa fa-arrow-left"  [disabled]="leftNavDisabled" (click)="moveLeft()">
+
+    </button>-->
+  </div>
+<div>
+  <drag-scroll class="demo-one"
+             drag-scroll-y-disabled="true"
+             scrollbar-hidden="true"
+             (dsInitialized)="onDragScrollInitialized()"
+             (indexChanged)="onIndexChanged($event)"
+             (reachesLeftBound)="leftBoundStat($event)"
+             (reachesRightBound)="rightBoundStat($event)"
+             (snapAnimationFinished)="onSnapAnimationFinished()"
+             #nav
+>
+ <!-- <app-cardview ></app-cardview>-->
+  <img drag-scroll-item *ngFor="let image of img2; let i = index" src="{{image}}" (click)="clickItem(i)"/>
+</drag-scroll>
+</div>
+
+
+  <div class="indicate-btn">
+
+    <mat-icon class="maticon"  (click)="moveRight()">keyboard_arrow_right</mat-icon>
+   <!-- <button mat-raised-button color="primary" [disabled]="rightNavDisabled" (click)="moveRight()">right</button>
+  -->
+  </div>
+
+
+  <div></div>
+  <!--<div fxLayout="row" fxLayoutGap="5px" fxLayoutAlign="center center">
+    <button mat-raised-button color="primary" [disabled]="leftNavDisabled" (click)="moveLeft()">left</button>
+    <button mat-raised-button color="primary" [disabled]="rightNavDisabled" (click)="moveRight()">right</button>
+  </div>-->
+</div>
+
+
+

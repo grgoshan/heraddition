@@ -3,14 +3,15 @@
   style="height:50px; color: #ffffff; background: #000000"
 >
   <span class="spacer"></span>
-  <img class="flag" src="/assets/flag.jpg">
-  <button class="icon-btn" routerLink="/login" mat-icon-button style="background: #0a0a0a;">
-    <mat-icon class="maticon">person</mat-icon>
+  <!--<img class="flag" src="/assets/flag.jpg">-->
+  <!--<h6 class="username" *ngIf="availableUser">{{username}}</h6>-->
+  <button class="icon-btn" mat-icon-button style="background: #0a0a0a;">
+    <mat-icon routerLink="/login" class="maticon">person</mat-icon>
   </button>
 
 
   <button class="icon-btn" routerLink="/cart" mat-icon-button style="background: #0a0a0a;">
-    <mat-icon class="maticon">shopping_cart</mat-icon>
+    <mat-icon class="maticon">local_mall</mat-icon>
     <span class="badge" *ngIf="itemcount > 0" >{{itemcount}}</span>
 
   </button>
@@ -39,7 +40,7 @@
 
 <div>
   <nav class="navbar navbar-light navbar-expand-md navigation-clean">
-    <div class="container"><a class="navbar-brand" href="#"><img src="/assets/LOGO1.png?h=c757bcc9c069f521096c976880b63d20" class="logo"></a><button class="navbar-toggler" data-toggle="collapse" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+    <div class="container"><a class="navbar-brand" routerLink="/"><img src="/assets/LOGO1.png?h=c757bcc9c069f521096c976880b63d20" class="logo"></a><button class="navbar-toggler" data-toggle="collapse" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
       <div
         class="collapse navbar-collapse" id="navcol-1">
         <ul class="nav navbar-nav ml-auto">

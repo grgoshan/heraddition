@@ -12,7 +12,7 @@ import {Item} from '../../model/item';
 export class ProductListComponent implements OnInit {
   breakpoint: number;
 products: Item[];
-
+crumTitle;
 
   constructor(private http: ProductService, private route: ActivatedRoute ) {
   }
@@ -20,6 +20,7 @@ products: Item[];
   ngOnInit() {
 this.route.queryParams.subscribe(params => {
   console.log(params['category']);
+  this.crumTitle = params['category'].toUpperCase();
   this.intialServerCall(params['category']);
 })
 

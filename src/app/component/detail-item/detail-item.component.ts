@@ -19,12 +19,13 @@ export class DetailItemComponent implements OnInit {
   }
   addTocart(product) {
    this.store.dispatch(new CreateCart({
-     id: product._id,
+     id: product.id,
     name: product.name,
     price: product.price,
        description: product.description,
-    image: product.productFiles,
-    quantity: this.quantity
+       image: product.productFiles,
+    quantity: this.quantity,
+     category: product.category
    }
    ));
   }

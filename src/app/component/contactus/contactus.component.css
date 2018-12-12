@@ -20,4 +20,11 @@ html * {
     max-width: 960px;
   }
 }
-
+.btn {
+  background: #d7a738;
+  border-radius: 0px;
+  border-color: #d7a738;
+}
+.main-container {
+  font-family: "Raleway", Sans-serif;
+}

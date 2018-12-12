@@ -1,14 +1,14 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-
+// import {StorageServiceModule} from 'angular-webstorage-service';
 import { AppRoutingModule } from './app-routing.module';
 import {HttpClientModule} from '@angular/common/http';
 import {ToastrModule} from 'ngx-toastr';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {StoreModule} from '@ngrx/store';
 import {reducer} from './store/reduce/cart.reducer';
-
+import {DragScrollModule} from 'ngx-drag-scroll/lib';
 // component
 import { AppComponent } from './app.component';
 import { HomeComponent } from './component/home/home.component';
@@ -30,6 +30,16 @@ import { ProductListComponent } from './component/product-list/product-list.comp
 import { PagenotfoundComponent } from './component/pagenotfound/pagenotfound.component';
 import { CartComponent } from './component/cart/cart.component';
 
+import {NguCarouselModule} from '@ngu/carousel';
+import { CardviewComponent } from './component/cardview/cardview.component';
+import { MultiImageSliderComponent } from './component/multi-image-slider/multi-image-slider.component';
+import { PromotionalProductComponent } from './component/promotional-product/promotional-product.component';
+import { SlickCarouselComponent } from './component/slick-carousel/slick-carousel.component';
+import { CheckoutComponent } from './component/checkout/checkout.component';
+import { ReturnExchangeComponent } from './component/return-exchange/return-exchange.component';
+import { ShippingComponent } from './component/shipping/shipping.component';
+import { BlogComponentComponent } from './component/blog-component/blog-component.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -46,12 +56,21 @@ import { CartComponent } from './component/cart/cart.component';
     DetailItemComponent,
     ProductListComponent,
     PagenotfoundComponent,
-    CartComponent
+    CartComponent,
+    CardviewComponent,
+    MultiImageSliderComponent,
+    PromotionalProductComponent,
+    SlickCarouselComponent,
+    CheckoutComponent,
+    ReturnExchangeComponent,
+    ShippingComponent,
+    BlogComponentComponent
   ],
   imports: [
     BrowserModule.withServerTransition({
       appId: 'herAdditions'
     }),
+    DragScrollModule,
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
@@ -62,6 +81,7 @@ import { CartComponent } from './component/cart/cart.component';
     MatGridListModule,
     MatIconModule,
     MatButtonModule,
+    NguCarouselModule,
     MatToolbarModule,
 StoreModule.forRoot({ cart: reducer })
   ],

@@ -63,7 +63,7 @@
 
 .row {
   margin-top: 20px;
-  background: #1eb6b7;
+  background: #04b6a8;
 }
 .navbar.navbar-light.navbar-expand-md {
   background: transparent;
@@ -88,7 +88,7 @@
 
 
 .navbar-light .navbar-nav .nav-link:focus, .navbar-light .navbar-nav .nav-link:hover {
-  color: rgba(255,213,62,0.89);
+  color:#d7a738;
 }
 
 .navbar-light .navbar-nav .nav-item .nav-link {
@@ -102,7 +102,7 @@
 }
 
 .nav-item .nav-link a:hover{
-  color: #ffae2c;
+  color: #d7a738;
 }
 
 .navbar-light .navbar-nav .nav-item {

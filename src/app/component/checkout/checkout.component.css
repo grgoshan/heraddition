@@ -1,0 +1,40 @@
+.credit-card-box .panel-title {
+  font-weight: bold;
+  overflow: hidden;
+}
+
+.credit-card-box .panel-title .panel-title-text {
+  max-width: 80px;
+  float: left;
+}
+
+.credit-card-box .panel-title .panel-title-image {
+  max-width: 160px;
+  float: right;
+
+}
+
+.credit-card-box label {
+  display: block;
+}
+
+.credit-card-box .panel-body .control-label {
+  text-transform: uppercase;
+}
+.main-container {
+  margin-left: 10px;
+  margin-right: 10px;
+
+}
+.payment-dialog-row {
+
+}
+.row {
+  margin-top: 10px;
+}
+.btn {
+  background: #04b6a8;
+  border-radius: 0px;
+  border-color: #04b6a8;
+  font-family: "Raleway", Sans-serif;
+}

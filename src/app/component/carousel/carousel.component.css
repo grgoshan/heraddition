@@ -1,0 +1,27 @@
+.shipping-tag {
+  position: relative;
+  background: #04b6a8;
+  justify-items: center;
+  text-align: center;
+height: 50px;
+}
+
+.shpping-text {
+position: absolute;
+  top: 7.5px;
+  left: 50%;
+  text-align: center;
+
+
+}
+
+.text-center {
+  height: 40px;
+  padding: 10px;
+  background: #04b6a8;
+  font-family: "Raleway", Sans-serif;
+  color: #ffffff;
+  margin-bottom: 10px;
+  font-size: 20px;
+}
+

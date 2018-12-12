@@ -125,7 +125,9 @@ h6 {
 }
 .product-wrap img {
   display: block;
-  width: 100%}
+  width: 275px;
+  height: 275px;
+}
 .loop-action {
   left: 50%;
   top: 50%;

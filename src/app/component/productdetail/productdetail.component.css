@@ -12,6 +12,7 @@ border-radius: 2px;
   background-color: #04b6a8;
   color:rgb(255,255,255);
   height: 30px;
+  font-family: "Raleway", Sans-serif;
   padding-top:5px;
 }
 .container{
@@ -34,4 +35,9 @@ html * {
 
 
 
-
+.btn {
+  background: #d7a738;
+  border-color: #d7a738;
+  border-radius: 0px;
+  color: #ffffff;
+}

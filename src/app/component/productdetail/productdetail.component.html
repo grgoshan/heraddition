@@ -11,7 +11,6 @@
 
 
 
-
       </div>
       <div class="col-md-9 col-lg-5 col-xl-5 col-sm-8 justify-content-center"><img class="img-fluid highlight-img" [src]="dImage"></div>
       <div class="col-md-12 col-lg-5 col-xl-5 col-sm-12">
@@ -20,7 +19,12 @@
           <p style="font-size: 12px;color: rgb(221,173,79);margin: -8px 0px 16px;font-family: 'Raleway', monospace;">28 customers review</p>
           <p style="font-family: 'Raleway', monospace;">Details</p>
           <p style="font-family: 'Raleway', monospace;color: rgb(40,44,48);">{{description}}</p>
-          <h6 style="font-family: 'Raleway', monospace;color: rgb(7,7,7);">Price: ${{price}} + $5 shipping&nbsp;</h6><button class="btn btn-primary float-right" type="button" style="background-color:#d7a738 ;">Add To Cart</button></section>
+          <h6 style="font-family: 'Raleway', monospace;color: rgb(7,7,7);">Price: ${{price}} + $5 shipping&nbsp;</h6>
+          <button class="btn btn-primary float-right"
+                  (click)="addTocart()"
+                  type="button"
+          >Add To Bag</button>
+        </section>
       </div>
     </div>
   </div>

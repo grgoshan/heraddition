@@ -4,6 +4,7 @@ import {AuthService} from '../../service/auth.service';
 import {Router} from '@angular/router';
 import { LoginCredit} from '../../model/loginCredit';
 import {ToastrService} from 'ngx-toastr';
+// import {LocalstorageService} from '../../service/localstorage.service';
 
 @Component({
   selector: 'app-login',
@@ -11,7 +12,7 @@ import {ToastrService} from 'ngx-toastr';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
-
+username: '';
 loginCredit: LoginCredit = {
   email: '',
   password: ''
@@ -25,9 +26,11 @@ loginCredit: LoginCredit = {
 if (valid) {
   console.log(this.loginCredit.email);
   this.api.userLogin(value).subscribe(res => {
-    const val = res['user'];
-    console.log('sssshell......' + val);
-    this.toast.success(`welcome ${this.loginCredit.email} `, 'Success', {
+    const val = res.user;
+    // this.storage.storeToken(res.token);
+    // this.storage.storeName(val);
+   // console.log('sssshell......' + val);
+    this.toast.success(`welcome ${val} `, 'Success', {
       positionClass: 'toast-top-center'
     } );
 

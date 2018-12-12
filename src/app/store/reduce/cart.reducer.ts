@@ -9,6 +9,7 @@ price: '',
 description: '',
 image: '',
 quantity: 0,
+  category: ''
 }
 
 export function reducer(state: Cart[] = [initialState],
