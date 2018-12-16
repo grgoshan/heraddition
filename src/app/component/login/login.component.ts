@@ -4,7 +4,7 @@ import {AuthService} from '../../service/auth.service';
 import {Router} from '@angular/router';
 import { LoginCredit} from '../../model/loginCredit';
 import {ToastrService} from 'ngx-toastr';
-// import {LocalstorageService} from '../../service/localstorage.service';
+import {LocalstoreService} from '../../service/localStorage/localstore.service';
 
 @Component({
   selector: 'app-login',
@@ -18,7 +18,7 @@ loginCredit: LoginCredit = {
   password: ''
 };
 
-  constructor( private router: Router, private api: AuthService, private toast: ToastrService) { }
+  constructor( private router: Router, private api: AuthService, private toast: ToastrService, private storage: LocalstoreService) { }
 
   ngOnInit( ) {
   }
@@ -27,9 +27,9 @@ if (valid) {
   console.log(this.loginCredit.email);
   this.api.userLogin(value).subscribe(res => {
     const val = res.user;
-    // this.storage.storeToken(res.token);
-    // this.storage.storeName(val);
-   // console.log('sssshell......' + val);
+    this.storage.setUsername(val);
+    this.storage.setToken(res.token);
+    this.storage.providetoSetUsername(val);
     this.toast.success(`welcome ${val} `, 'Success', {
       positionClass: 'toast-top-center'
     } );

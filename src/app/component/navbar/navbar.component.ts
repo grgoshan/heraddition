@@ -3,8 +3,7 @@ import {Store} from '@ngrx/store';
 import {Cart} from '../../model/cart';
 import {AppState} from '../../store/action/app.state';
 import {Observable} from 'rxjs';
-import {Item} from '../../model/item';
-// import {LocalstorageService} from '../../service/localstorage.service';
+import {LocalstoreService} from '../../service/localStorage/localstore.service';
 
 
 @Component({
@@ -14,23 +13,24 @@ import {Item} from '../../model/item';
 })
 export class NavbarComponent implements OnInit {
   itemcount;
-  username;
+  username = '';
   availableUser: boolean = false;
 cartitem: Observable<Cart[]>
-  constructor(private store: Store<AppState>) {
+  constructor(private store: Store<AppState>, private storage: LocalstoreService) {
   this.cartitem = store.select('cart');
   this.cartitem.subscribe(res => {
     this.itemcount = res.length - 1;
   });
   }
   ngOnInit() {
-/*  if(this.storage.getToken())
-
-    if (this.storage.getToken() === '0' || this.storage.getToken() === '') {
-  this.availableUser = false;
+  this.storage.currentusername.subscribe(user => {
+    this.username = user;
+  })
+console.log(':::::::local:::::::' + this.storage.getUsername());
+if (this.storage.getUsername() === '0' || this.storage.getUsername() === null) {
 } else {
-      this.username = this.storage.getname();
-  this.availableUser = true;
-}*/
+  this.storage.providetoSetUsername(this.storage.getUsername());
+ // this.username = this.storage.getUsername();
+}
   }
 }

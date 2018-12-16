@@ -4,9 +4,11 @@
 >
   <span class="spacer"></span>
   <!--<img class="flag" src="/assets/flag.jpg">-->
-  <!--<h6 class="username" *ngIf="availableUser">{{username}}</h6>-->
+  <h6 class="username">{{username}}</h6>
+
   <button class="icon-btn" mat-icon-button style="background: #0a0a0a;">
-    <mat-icon routerLink="/login" class="maticon">person</mat-icon>
+    <mat-icon routerLink="/login" class="maticon" *ngIf="username ==''">person</mat-icon>
+    <mat-icon routerLink="/login" class="maticon" *ngIf="username !==''">exit_to_app</mat-icon>
   </button>
 
 

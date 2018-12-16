@@ -26,7 +26,7 @@ const api = require('./node_src/routes/api');
 const auth = require('./node_src/routes/auth');
 const productRouter = require('./node_src/routes/productRouter');
 const homeRouter = require('./node_src/routes/home');
-
+const mailRouter = require('./node_src/routes/mailer')
 // MIDDLEWARE
 app.use(morgan('dev'));
 app.use(express.json());
@@ -62,6 +62,7 @@ app.get('/api/!*', (req, res) => {
 app.use('/api', api);
 app.use('/api/product', productRouter);
 app.use('/api/home', homeRouter);
+app.use('/api/mail', mailRouter)
 // Server static files from /browser
 app.get('*.*', express.static(join(DIST_FOLDER, 'browser')));
 

@@ -159,7 +159,7 @@ nav h1 {
   background: #6b6b6b;
   width: 50px;
   height: 50px;
-  margin-right: 10px;
+
 }
 .myBannerPoint li.active {
   transform: translateY(-10px);
@@ -236,9 +236,18 @@ nav h1 {
 
 .demo-one {
   height: 260px;
-  width: 700px;
+  width: 350px;
   justify-items: center;
   background-color: #FFFFFF;
+}
+
+@media (min-width: 750px) {
+  .demo-one {
+    height: 260px;
+    width: 700px;
+    justify-items: center;
+    background-color: #FFFFFF;
+  }
 }
 
 .demo-one img {
@@ -338,18 +347,44 @@ nav h1 {
   }
 }
 
-.scroller {
-  display: grid;
-  grid-template-columns: auto 10px 700px 10px auto ;
-grid-column-gap: 10px;
-}
+
 
 .indicate-btn{
   justify-items: center;
-  margin: auto;
+  margin-top: auto;
+  margin-bottom: auto;
+
+}
+
+.indicate-btn-left{
+  justify-items: center;
+  margin-top: auto;
+  margin-bottom: auto;
+
 
 }
 
 .icon-btn {
 
 }
+
+.scroller {
+  display: grid;
+  grid-template-columns: auto 10px 350px 10px auto ;
+  grid-column-gap: 10px;
+}
+@media (min-width: 750px) {
+  .scroller {
+    display: grid;
+    grid-template-columns: auto 10px 700px 10px auto ;
+    grid-column-gap: 10px;
+  }
+}
+.maticon right{
+  margin-left: auto;
+  margin-right: auto;
+}
+ .maticon left {
+   margin-left:auto;
+   margin-right: auto;
+ }

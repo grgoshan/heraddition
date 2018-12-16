@@ -1,0 +1,40 @@
+const express = require('express');
+const router = express.Router();
+const mailer = require('nodemailer');
+
+router.get('/sendmail', (req, res, next) => {
+  mailer.createTestAccount((err, account) => {
+    let transporter = mailer.createTransport({
+      service: 'gmail',
+      host: account.smtp.host,
+      port: account.smtp.port,
+      secure: account.smtp.secure,
+
+      auth: {
+        user: 'sherpa.takashi124@gmail.com',
+        pass: 'aloopaddu'
+      },
+      logger: false,
+      debug: false
+    });
+    let mailOptions = {
+      from: 'sherpa.takashu124@gmail.com',
+      to: 'sherpa.akash124@hotmail.com',
+      subject: 'Hello ✔', // Subject line
+      text: 'Hello world?', // plain text body
+      html: '<b>Hello world?</b>'
+    };
+    transporter.sendMail(mailOptions, (error, info)=>{
+      if(error){
+        return console.log('mail error' + error)
+      }
+
+      console.log('Message sent: %s', info.messageId);
+      // Preview only available when sending through an Ethereal account
+      console.log('Preview URL: %s', mailer.getTestMessageUrl(info));
+    })
+  })
+})
+
+
+module.exports  = router;

@@ -135,5 +135,13 @@ this.router.navigate(['product', id])
   onDragScrollInitialized() {
     console.log('first demo drag scroll has been initialized.');
   }
+
+  onResize(event) {
+    if (event.target.innerWidth <= 600) {
+     // this.breakpoint = 1;
+    } else {
+     // this.breakpoint = 2;
+    }
+  }
 }
 

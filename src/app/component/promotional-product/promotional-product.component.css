@@ -254,4 +254,7 @@
   padding-right: 130px;
 }
 
-
+.img-fluid {
+  width: 100%;
+  height: auto;
+}

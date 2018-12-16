@@ -1,7 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-// import {StorageServiceModule} from 'angular-webstorage-service';
+import {StorageServiceModule} from 'ngx-webstorage-service';
 import { AppRoutingModule } from './app-routing.module';
 import {HttpClientModule} from '@angular/common/http';
 import {ToastrModule} from 'ngx-toastr';
@@ -81,6 +81,7 @@ import { BlogComponentComponent } from './component/blog-component/blog-componen
     MatGridListModule,
     MatIconModule,
     MatButtonModule,
+    StorageServiceModule,
     NguCarouselModule,
     MatToolbarModule,
 StoreModule.forRoot({ cart: reducer })
