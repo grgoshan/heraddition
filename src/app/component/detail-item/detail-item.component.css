@@ -38,7 +38,7 @@
   top:  2px;
   left:  2px;
   background:  #1eb6b7;
-  font-family:  'Raleway',  monospace;
+  font-family:  'Raleway';
   border-color:  #1eb6b7;
   padding:  5px;
 
@@ -68,7 +68,7 @@ h6 {
   background: rgba(59, 62, 67, .85);
 }
 .actions a:before {
-  font-family: FontAwesome;
+  font-family: 'Raleway';
 }
 .add-to-cart:before {
   content: ""}
@@ -80,7 +80,7 @@ h6 {
   content: ''}
 .product-info {
   padding-bottom: 10px;
-  font-family: 'Raleway', sans-serif;
+  font-family: 'Raleway';
 }
 .product-title {
   margin: 0 0 10px;
@@ -188,7 +188,7 @@ h6 {
   color: #F2453E;
 }
 .price, .product-title {
-  font-family: "Raleway";
+  font-family: 'Raleway';
   color: #162546;
 }
 .product-title {

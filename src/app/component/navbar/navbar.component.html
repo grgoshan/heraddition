@@ -8,7 +8,7 @@
 
   <button class="icon-btn" mat-icon-button style="background: #0a0a0a;">
     <mat-icon routerLink="/login" class="maticon" *ngIf="username ==''">person</mat-icon>
-    <mat-icon routerLink="/login" class="maticon" *ngIf="username !==''">exit_to_app</mat-icon>
+    <mat-icon  class="maticon" (click)="logout()" *ngIf="username !==''">exit_to_app</mat-icon>
   </button>
 
 
@@ -49,7 +49,7 @@
           <li class="nav-item" role="presentation"><a routerLink="/products" [queryParams]= "{category: 'earing'}"  class="nav-link">EARINGS</a></li>
           <li class="nav-item" role="presentation"><a routerLink="/products" [queryParams]="{category: 'bangles'}" class="nav-link" >BANGLES</a></li>
           <li class="nav-item" role="presentation"><a routerLink="/products" [queryParams]= "{category: 'necklace'}"  class="nav-link" >NECKLACE</a></li>
-          <li class="nav-item" role="presentation"><a routerLink="/products" [queryParams]= "{category: 'hairpins'}" class="nav-link">HAIRPINS</a></li>
+          <li class="nav-item" role="presentation"><a routerLink="/products" [queryParams]= "{category: 'rings'}" class="nav-link">RINGS</a></li>
           <li class="nav-item" role="presentation"><a routerLink="/products" [queryParams]= "{category: 'sale'}" class="nav-link" >SALE</a></li>
         </ul>
       </div>

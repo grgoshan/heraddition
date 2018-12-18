@@ -1,6 +1,6 @@
 
 .body{
-  font-family: 'Raleway', monospace;
+  font-family: 'Raleway';
 }
 .bannerimage {
   width: 100%;
@@ -20,7 +20,7 @@
 
 .container{
   margin-top: 30px;
-  font-family: "Raleway", Sans-serif;
+  font-family: 'Raleway';
 }
 
 .two {
@@ -30,7 +30,7 @@
 
 .btn {
   background: #04b6a8;
-  font-family: "Raleway", Sans-serif;
+  font-family: 'Raleway';
   color: #ffffff;
   border-radius: 0px;
   border-color: #04b6a8;

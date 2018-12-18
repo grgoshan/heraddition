@@ -28,9 +28,14 @@ cartitem: Observable<Cart[]>
   })
 console.log(':::::::local:::::::' + this.storage.getUsername());
 if (this.storage.getUsername() === '0' || this.storage.getUsername() === null) {
+this.storage.providetoSetUsername('');
 } else {
   this.storage.providetoSetUsername(this.storage.getUsername());
  // this.username = this.storage.getUsername();
 }
   }
+  logout () {
+  this.storage.setUsername('');
+  this.storage.providetoSetUsername('');
+}
 }

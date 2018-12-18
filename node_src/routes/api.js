@@ -23,8 +23,8 @@ email: req.body.email
     }else{
       const  user = new User({
         _id: new mongoose.Types.ObjectId(),
-        firstname: req.body.firstname,
-        lastname: req.body.firstname,
+        firstname: req.body.firstName,
+        lastname: req.body.lastName,
         phone: req.body.phone,
         email: req.body.email,
         password: req.body.password

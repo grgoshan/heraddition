@@ -74,6 +74,7 @@ export class MultiImageSliderComponent implements OnInit, AfterViewInit {
          console.log('ye for  inside ' + this.products[i].productFiles);
        }
      }
+     this.delay(3000);
      console.log('server call mult' + this.products[0] );
      console.log('server call mult' + this.products[1].name);
    }, error => {
@@ -142,6 +143,12 @@ this.router.navigate(['product', id])
     } else {
      // this.breakpoint = 2;
     }
+  }
+  async  delay(ms: number) {
+    return new Promise( resolve => {
+      this.moveRight();
+      console.log('after delayyyy');
+    } );
   }
 }
 

@@ -62,8 +62,7 @@ export class AddNewItemComponent implements OnInit {
     if (this.addItemFormGroup.valid && this.uploader.queue.length >= 1) {
       this.uploader.uploadAll();
       this.uploader.onCompleteItem = (item: any, response: any, status: any, headers: any) => {
-        console.log("ImageUpload: uploaded:" + response);
-
+        console.log('ImageUpload: uploaded:' + response);
         const data = JSON.parse(response);
         console.log(data.body);
         this.filename.push(data.body);
@@ -78,6 +77,7 @@ export class AddNewItemComponent implements OnInit {
           }
           this.itemService.addNewItem(value).subscribe(res => {
             console.log('enter ho gayaaa..');
+         this.addItemFormGroup.reset();
           }, error => {
           });
         }

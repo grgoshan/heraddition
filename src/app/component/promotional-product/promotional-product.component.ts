@@ -16,7 +16,7 @@ this.initialServerCall();
   }
 
   initialServerCall() {
-    this.http.getNewPromo('new arrival', 3).subscribe((res) => {
+    this.http.getNewPromo('special', 3).subscribe((res) => {
       this.products = res.products;
     });
   }

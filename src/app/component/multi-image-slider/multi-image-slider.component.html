@@ -22,13 +22,13 @@
                (window:resize) = "onResize($event)"
   >
  <!-- <app-cardview ></app-cardview>-->
-  <img drag-scroll-item *ngFor="let image of images; let i = index" src="{{image}}" (click)="clickItem(i)"/>
+  <img drag-scroll-item *ngFor="let image of img2; let i = index" src="{{image}}" (click)="clickItem(i)"/>
 </drag-scroll>
 </div>
 
 
   <div class="indicate-btn">
-    <mat-icon class="maticon right"  (click)="moveLeft()">keyboard_arrow_right</mat-icon>
+    <mat-icon class="maticon right" (click)="moveRight()">keyboard_arrow_right</mat-icon>
   </div>
 
 

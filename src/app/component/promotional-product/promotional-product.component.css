@@ -248,12 +248,31 @@
 
 
 
-.promotionalcatContainer{
-  margin-top: 30px;
-  padding-left: 130px;
-  padding-right: 130px;
+
+@media(min-width:1000px) {
+  .promotionalcatContainer{
+    margin-top: 30px;
+    padding-left: 120px;
+    padding-right: 120px;
+  }
 }
 
+@media(min-width:768px) {
+  .promotionalcatContainer{
+    margin-top: 30px;
+    padding-left: 80px;
+    padding-right: 80px;
+  }
+}
+
+
+@media(min-width:576px) {
+  .promotionalcatContainer{
+    margin-top: 30px;
+    padding-left: 80px;
+    padding-right: 80px;
+  }
+}
 .img-fluid {
   width: 100%;
   height: auto;

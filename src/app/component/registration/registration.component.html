@@ -9,7 +9,7 @@
         <!--<label for="firstName">First Name</label>-->
         <input type="text" class="form-control"
                placeholder="First name"
-               name="firstName" [(ngModel)]="user.firstname" #firstName="ngModel" [ngClass]="{ 'is-invalid': f.submitted && firstName.invalid }" required />
+               name="firstName" [(ngModel)]= "user.firstname" #firstName="ngModel" [ngClass]="{ 'is-invalid': f.submitted && firstName.invalid }" required />
         <div *ngIf="f.submitted && firstName.invalid" class="invalid-feedback">
           <div *ngIf="firstName.errors.required">First Name is required</div>
         </div>

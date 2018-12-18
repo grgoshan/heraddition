@@ -1,5 +1,5 @@
 html * {
-  font-family: Raleway;
+  font-family: 'Raleway';
 }
 
 .row.bgcat {
@@ -8,7 +8,7 @@ html * {
   margin-left: 10%;
   margin-right: 10%;
   justify-content: center;
-  font-family:Raleway;
+  font-family: 'Raleway';
 }
 
 .row.bgcat.col-md-3.col-sm-12.col-lg-3{
@@ -46,7 +46,7 @@ html * {
   background-color: #d7a738;
   border-color: #d7a738;
   right: 16px;
-  font-family: "Raleway", Sans-serif;
+  font-family: 'Raleway';
   border-radius: 0px;
   min-height: 30px;
 }
@@ -55,7 +55,7 @@ html * {
   position: absolute;
   bottom: 20px;
   right: 16px;
-  font-family: "Raleway", Sans-serif;
+  font-family: 'Raleway';
   border-radius: 0px;
 }
 
@@ -68,7 +68,7 @@ html * {
 }
 
 .arrival{
-  font-family: Raleway;
+  font-family: 'Raleway';
   margin-bottom: 30px;
 }
 .scrolling-wrapper.card {

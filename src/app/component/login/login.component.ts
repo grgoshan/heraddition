@@ -33,7 +33,7 @@ if (valid) {
     this.toast.success(`welcome ${val} `, 'Success', {
       positionClass: 'toast-top-center'
     } );
-
+this.router.navigate(['']);
   }, (err) => {
     console.log(err);
   });

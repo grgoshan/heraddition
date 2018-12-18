@@ -24,12 +24,14 @@ response: any;
   ngOnInit() {
   }
 onSubmit({value, valid}: {value: User, valid: boolean}) {
+    console.log(value)
 if (valid) {
   this.api.userSignUp(value).subscribe(res => {
      this.response = res;
     this.toast.success('Registration completed', 'Success', {
       positionClass: 'toast-top-center'
     } );
+    this.router.navigate(['login']);
   }, (err) => {
     console.log(err);
   });

@@ -1,5 +1,5 @@
 html * {
-  font-family: Raleway;
+  font-family: 'Raleway';
 }
 @media (min-width:1200px) {
   .container {
@@ -26,5 +26,5 @@ html * {
   border-color: #d7a738;
 }
 .main-container {
-  font-family: "Raleway", Sans-serif;
+  font-family: 'Raleway';
 }

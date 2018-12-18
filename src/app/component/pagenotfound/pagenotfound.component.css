@@ -39,7 +39,7 @@ body {
   justify-content: center;
   align-items: center;
   color: #fff;
-  font-family: "Raleway", Sans-serif;
+  font-family: 'Raleway';
   text-shadow: 0 30px 10px rgba(0, 0, 0, 0.15);
 }
 body:before {
@@ -76,7 +76,7 @@ button {
   box-shadow: 0 30px 15px rgba(0, 0, 0, 0.15);
   outline: none;
   color: #fff;
-  font: 400 16px/2.5 Nunito, "Varela Round", Sans-serif;
+  font: 400 16px/2.5 Nunito, "Raleway", Raleway;
   text-transform: uppercase;
   cursor: pointer;
 }
