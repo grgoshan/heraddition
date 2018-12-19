@@ -35,8 +35,7 @@ export class MultiImageSliderComponent implements OnInit, AfterViewInit {
   xDisabled;
   yDisabled;
   images = [
-    'assets/about.jpg',
-    'assets/item2.png',
+    'assets/tets.jpg',
     'assets/about.jpg',
     'assets/item2.png',
     'assets/about.jpg',

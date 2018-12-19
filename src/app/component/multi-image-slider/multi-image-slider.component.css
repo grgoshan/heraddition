@@ -243,7 +243,7 @@ nav h1 {
 
 @media (min-width: 750px) {
   .demo-one {
-    height: 260px;
+    height: 400px;
     width: 700px;
     justify-items: center;
     background-color: #FFFFFF;
@@ -251,7 +251,7 @@ nav h1 {
 }
 
 .demo-one img {
-  height: 260px;
+  height: 400px;
   width: 350px;
 
 }

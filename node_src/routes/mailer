@@ -20,15 +20,15 @@ router.post('/sendmail', (req, res, next) => {
 
 
       auth: {
-        user: 'sherpa.takashi124@gmail.com',
-        pass: 'aloopaddu'
+        user: 'gurung.oshan124@gmail.com',
+        pass: 'Apple08!'
       },
       logger: false,
       debug: false
     });
     let mailOptions = {
       from: `${req.body.name}` + `<${req.body.email}>` ,
-      to: 'sherpa.takashu124@gmail.com',
+      to: 'sassytamu@gmail.com',
       subject: 'Contact', // Subject line
       text: 'Hello world?', // plain text body
       html: `<b>${req.body.message}</b>`
