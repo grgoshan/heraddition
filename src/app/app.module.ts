@@ -9,6 +9,8 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {StoreModule} from '@ngrx/store';
 import {reducer} from './store/reduce/cart.reducer';
 import {DragScrollModule} from 'ngx-drag-scroll/lib';
+import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
+
 // component
 import { AppComponent } from './app.component';
 import { HomeComponent } from './component/home/home.component';
@@ -39,6 +41,7 @@ import { CheckoutComponent } from './component/checkout/checkout.component';
 import { ReturnExchangeComponent } from './component/return-exchange/return-exchange.component';
 import { ShippingComponent } from './component/shipping/shipping.component';
 import { BlogComponentComponent } from './component/blog-component/blog-component.component';
+import { ModalComponent } from './component/modal/modal.component';
 
 @NgModule({
   declarations: [
@@ -64,7 +67,8 @@ import { BlogComponentComponent } from './component/blog-component/blog-componen
     CheckoutComponent,
     ReturnExchangeComponent,
     ShippingComponent,
-    BlogComponentComponent
+    BlogComponentComponent,
+    ModalComponent
   ],
   imports: [
     BrowserModule.withServerTransition({
@@ -84,9 +88,11 @@ import { BlogComponentComponent } from './component/blog-component/blog-componen
     StorageServiceModule,
     NguCarouselModule,
     MatToolbarModule,
+    NgbModule,
 StoreModule.forRoot({ cart: reducer })
   ],
   exports: [ MatGridListModule ],
+  entryComponents: [ModalComponent],
   providers: [AuthService, ItemServiceService],
   bootstrap: [AppComponent]
 })

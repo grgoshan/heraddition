@@ -26,3 +26,7 @@
 .two {
   margin-top: 20px;
 }
+br {
+  display: block;
+  margin: 10px 0;
+}

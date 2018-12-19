@@ -3,17 +3,18 @@
   <div class="row promotionalProduct">
 
     <div class="col-md-4 col-sm-12 model-card" *ngFor="let product of products">
-      <a href="#">
+      <a [routerLink]= "['/product', product.id ]">
       <div class="bsblox-image-effect16">
         <img class="img-fluid " src={{product.productFiles}} />
 
         <div class="bsblox-caption">
 
-          <p>View <strong> Product</strong></p>
+          <p class="strongfont" >View <strong> Product</strong></p>
         </div>
         <div class="bsblox-links">
           <a class="profile-link" [routerLink]= "['/product', product.id ]"><i class="fa fa-search fa fa-search"></i></a></div>
-        <div class="text-center model-card-title">{{product.name}}</div></div></a></div>
+        <div class="text-center model-card-title">{{product.name}}</div></div></a>
+    </div>
 
 
 

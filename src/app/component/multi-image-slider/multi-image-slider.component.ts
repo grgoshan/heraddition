@@ -60,7 +60,10 @@ export class MultiImageSliderComponent implements OnInit, AfterViewInit {
     this.initialServerCall();
     // this.initialServerCall();
    //  setTimeout(this.initialServerCall, 3000)
-
+    ( async () => {
+      await this.delay(3000);
+      this.moveRight();
+    } )();
   }
   initialServerCall() {
    this.http.getNewArrivalItems('new arrival', 4).subscribe((res) => {
@@ -74,7 +77,6 @@ export class MultiImageSliderComponent implements OnInit, AfterViewInit {
          console.log('ye for  inside ' + this.products[i].productFiles);
        }
      }
-     this.delay(3000);
      console.log('server call mult' + this.products[0] );
      console.log('server call mult' + this.products[1].name);
    }, error => {
@@ -144,11 +146,10 @@ this.router.navigate(['product', id])
      // this.breakpoint = 2;
     }
   }
-  async  delay(ms: number) {
-    return new Promise( resolve => {
-      this.moveRight();
-      console.log('after delayyyy');
-    } );
+  async delay(ms: number) {
+    return new Promise<void>(resolve => {
+      setTimeout(resolve, ms);
+    });
   }
 }
 

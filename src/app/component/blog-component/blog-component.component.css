@@ -27,7 +27,9 @@
   margin-top: 20px;
 }
 
-
+one{
+  margin-bottom: 30px;
+}
 .btn {
   background: #04b6a8;
   font-family: 'Raleway';
@@ -35,4 +37,10 @@
   border-radius: 0px;
   border-color: #04b6a8;
   float: right;
+  margin-bottom: 30px;
+}
+
+.br {
+  display: block;
+  margin-bottom: 100px;
 }

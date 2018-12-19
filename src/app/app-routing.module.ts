@@ -19,6 +19,7 @@ import {CheckoutComponent} from './component/checkout/checkout.component';
 import {ShippingComponent} from './component/shipping/shipping.component';
 import {ReturnExchangeComponent} from './component/return-exchange/return-exchange.component';
 import {BlogComponentComponent} from './component/blog-component/blog-component.component';
+import {ModalComponent} from './component/modal/modal.component';
 
 
 const routes: Routes = [
@@ -40,7 +41,8 @@ const routes: Routes = [
   {path: 'bill' , component: CheckoutComponent},
   {path: 'shipping', component: ShippingComponent},
   {path: 'return&exchange', component: ReturnExchangeComponent},
-  {path: 'blog', component: BlogComponentComponent}
+  {path: 'blog', component: BlogComponentComponent},
+  {path: 'mod', component: ModalComponent}
 
 ];
 
